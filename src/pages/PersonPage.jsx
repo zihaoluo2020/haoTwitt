@@ -18,7 +18,7 @@ export default function PersonPage() {
 
     function getAllUserData() {
         const username = params.username;
-        Axios.get('http://localhost:8000/api/user/' + username)
+        Axios.get('/api/user/' + username)
         .then(function(response) {
             
             setUser(response.data[0]);
@@ -27,7 +27,7 @@ export default function PersonPage() {
     }
     function getAllPostData() {
         const username = params.username;
-        Axios.get('http://localhost:8000/api/post/userPost/' + username)
+        Axios.get('/api/post/userPost/' + username)
         .then(function(response) {
             
 

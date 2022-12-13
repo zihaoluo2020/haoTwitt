@@ -30,7 +30,7 @@ function FeaturedPost(props) {
     // console.log(text)
     setModify(false);
     // console.log(post._id)
-    Axios.put('http://localhost:8000/api/post/description', 
+    Axios.put('/api/post/description', 
     {"id":post._id, "description":text})
             .then(function(response) {
                 navigate("/homepage");
@@ -43,7 +43,7 @@ function FeaturedPost(props) {
   const handleDelete = ()=>{
     // console.log(text)
     setModify(false);
-    Axios.put('http://localhost:8000/api/post/delete', 
+    Axios.put('/api/post/delete', 
     {"id":post._id})
             .then(function(response) {
                 navigate("/homepage");

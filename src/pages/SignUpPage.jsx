@@ -27,7 +27,7 @@ export function SignUpPage(props) {
           date: Date.now()
       };
       
-      Axios.post('http://localhost:8000/api/user', createUserInput)
+      Axios.post('/api/user', createUserInput)
                   .then(function(response) {
                       // getAllPostData();
                       const cookies = new Cookies();
@@ -51,7 +51,7 @@ export function SignUpPage(props) {
       
       // console.log(createUserInput);
     
-      Axios.post('http://localhost:8000/api/user/auth', createUserInput)
+      Axios.post('/api/user/auth', createUserInput)
                   .then(function(response) {
                       // getAllPostData();
                       const cookies = new Cookies();

@@ -13,7 +13,7 @@ export default function HomePage() {
     
 
     function getAllPostData() {
-        Axios.get('http://localhost:8000/api/post')
+        Axios.get('/api/post')
         .then(function(response) {
 
             response.data.sort(function(a, b) {

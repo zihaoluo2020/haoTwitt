@@ -25,7 +25,7 @@ function MainFeaturedPost(props) {
   const handleEnd = ()=>{
     // console.log(text)
     setModify(false);
-    Axios.put('http://localhost:8000/api/user/description', 
+    Axios.put('/api/user/description', 
     {"username":logUser, "description":text})
             .then(function(response) {
               window.location.reload(false);

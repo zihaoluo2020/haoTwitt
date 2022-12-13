@@ -40,7 +40,7 @@ export function CreatePostPage(props) {
           date: Date.now()
       };
       
-      Axios.post('http://localhost:8000/api/post', postInput)
+      Axios.post('/api/post', postInput)
                   .then(function(response) {
                       // getAllPostData();
                       navigate("/homepage");
