@@ -56,6 +56,6 @@ db.on('error', console.error.bind(console, 'Error connecting to MongoDB:'));
 
 
 
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000, () => {
     console.log('Starting server...?')
 })
