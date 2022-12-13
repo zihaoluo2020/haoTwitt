@@ -34,14 +34,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 
+app.use(express.static('./src/dist/'));
+
 app.use('/api/post', PostRoute);
 app.use('/api/user', UserRoute);
 
-app.use(express.static(path.join(__dirname, './src/build')));
+
+app.use('src/public', express.static(path.join(__dirname, '/')));
 
 app.get('*', function (req, res) {
     console.log("received request");
-    res.sendFile(path.join(__dirname, "build", "index.html"));
+    res.sendFile(path.join(__dirname, 'src/public', 'index.html'));
     // res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
