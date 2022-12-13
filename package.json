@@ -7,8 +7,9 @@
     "node": "14.17"
   },
   "scripts": {
-    "start": "concurrently \"nodemon ./server.js\" \"react-scripts start\"",
-    
+    "devstart": "concurrently \"nodemon ./server.js\" \"react-scripts start\"",
+    "start": "node ./server.js",
+    "heroku-postbuild": "react-scripts start",
     "build": "react-scripts build",
     "startreact": "react-scripts start",
     "eject": "react-scripts eject"
