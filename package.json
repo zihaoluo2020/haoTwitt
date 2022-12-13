@@ -1,5 +1,5 @@
 {
-  "name": "twitt_backend",
+  "name": "haoTwitt",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,8 +7,8 @@
     "node": "14.17"
   },
   "scripts": {
-    "devstart": "concurrently \"nodemon ./server.js\" \"react-scripts start\"",
-    "start": "node ./server.js",
+    "start": "concurrently \"nodemon ./server.js\" \"react-scripts start\"",
+    
     "build": "react-scripts build",
     "startreact": "react-scripts start",
     "eject": "react-scripts eject"

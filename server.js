@@ -40,11 +40,11 @@ app.use('/api/post', PostRoute);
 app.use('/api/user', UserRoute);
 
 
-app.use('public', express.static(path.join(__dirname, '/')));
+app.use('build', express.static(path.join(__dirname, '/')));
 
 app.get('*', function (req, res) {
     console.log("received request");
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
     // res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
