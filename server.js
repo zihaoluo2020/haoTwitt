@@ -37,6 +37,7 @@ app.use(cookieParser());
 app.use('/api/post', PostRoute);
 app.use('/api/user', UserRoute);
 
+app.use(express.static(path.join(__dirname, './src/build')));
 
 app.get('*', function (req, res) {
     console.log("received request");
