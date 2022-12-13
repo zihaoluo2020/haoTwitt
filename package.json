@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "14.17"
+  },
   "scripts": {
     "devstart": "concurrently \"nodemon ./server.js\" \"react-scripts start\"",
     "start": "node ./server.js",
