@@ -40,13 +40,14 @@ app.use('/api/post', PostRoute);
 app.use('/api/user', UserRoute);
 
 
-app.use('build', express.static(path.join(__dirname, '/')));
+app.use(express.static(path.join(__dirname, 'build')));
+
 
 app.get('*', function (req, res) {
-    console.log("received request");
+    console.log("get here")
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
-    // res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+
 
 MongoAtlasURLString = "mongodb+srv://froselle:z9084725@cluster0.6xetkn2.mongodb.net/twitt?retryWrites=true&w=majority"
 
